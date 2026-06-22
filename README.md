@@ -152,3 +152,85 @@ massa_negativos.sql
 | Negativo | 20 |
 | Urgência Alta | 16 |
 | Impacto Alto | 16 |
+
+---
+
+# Passo 3: Una as peças e refine
+
+Nesta etapa, você vai **juntar intenção, contexto, critérios e restrições em um único prompt final**.
+
+## ✍️ O que fazer
+
+Reúna o que você escreveu nos passos anteriores e transforme tudo em um comando claro para a IA. O prompt final deve dizer o papel da IA, o objetivo, os dados que serão analisados, o formato da resposta e os cuidados esperados.
+
+Depois de montar o prompt, revise: a tarefa está clara? O formato da resposta foi definido? A IA sabe o que evitar?
+
+## 📋 Modelo para você adaptar
+
+Copie o bloco abaixo no seu editor de texto e preencha os campos entre colchetes:
+
+> Atue como [papel da IA, como analista de dados, analista de experiência do cliente ou consultor de negócios].
+>
+> Sua tarefa é analisar [tipo de feedback ou base de comentários] sobre [produto, serviço ou canal] para identificar [objetivo principal].
+>
+> **Contexto:** [explique o cenário, o público que usará a análise e a decisão que precisa ser apoiada].
+>
+> **Dados disponíveis:** [descreva os campos, colunas ou exemplos de informações que serão fornecidas].
+>
+> **Instruções de análise:**
+> 1. Classifique os feedbacks por [critérios de classificação].
+> 2. Identifique os principais padrões, problemas, elogios e oportunidades.
+> 3. Aponte evidências nos dados fornecidos.
+> 4. Sugira ações práticas para [público ou área responsável].
+>
+> **Formato da resposta:** [descreva o formato esperado, como resumo executivo, tabela, tópicos e recomendações].
+>
+> **Restrições:**
+> - Use apenas os dados fornecidos.
+> - Não invente números, causas ou conclusões.
+> - Não exponha dados pessoais ou sensíveis.
+> - Informe limitações quando os dados não forem suficientes.
+> - Use linguagem [estilo desejado].
+
+## ✨ Exemplo preenchido — baseado na estrutura deste projeto
+
+O exemplo abaixo usa os campos e tabelas criados nos arquivos `desafio.sql`, `massa_dados.sql` e `massa_negativos.sql`:
+
+> Atue como analista de dados e experiência do cliente em um banco.
+>
+> Sua tarefa é analisar feedbacks de clientes sobre aplicativo bancário, Pix, cartão de crédito e atendimento por chat para identificar temas recorrentes, sentimento dos clientes e oportunidades de melhoria.
+>
+> **Contexto:** A análise será usada por uma equipe de experiência do cliente para priorizar melhorias nos canais digitais e reduzir atritos no atendimento. O foco é transformar comentários soltos em insights claros e acionáveis.
+>
+> **Dados disponíveis:** Serão fornecidos comentários com `data_comentario`, `canal de atendimento`, `texto_feedback`, `produto citado` e `nota_satisfacao` de 1 a 5. Os feedbacks já possuem classificações de `sentimento`, `urgencia` e `impacto_experiencia` geradas por análise anterior. A base contém 50 registros entre janeiro e abril de 2026, dos quais 20 são feedbacks negativos para validação.
+>
+> **Instruções de análise:**
+> 1. Classifique os feedbacks por tema (`temas`), sentimento, urgência e produto citado.
+> 2. Identifique os principais padrões, problemas, elogios e oportunidades.
+> 3. Aponte evidências nos dados fornecidos, usando exemplos curtos de comentários.
+> 4. Sugira ações práticas para a equipe de experiência do cliente e para o time responsável pelos canais digitais.
+>
+> **Formato da resposta:** Entregue um resumo executivo com até 5 linhas, uma tabela com tema, sentimento, evidência e ação sugerida, além de uma lista final com as 3 prioridades mais importantes.
+>
+> **Restrições:**
+> - Use apenas os dados fornecidos.
+> - Não invente números, causas ou conclusões.
+> - Não exponha dados pessoais ou sensíveis (os IDs de clientes são anonimizados: `CLI-XXXX`).
+> - Informe limitações quando os dados não forem suficientes.
+> - Use linguagem simples, direta e voltada para tomada de decisão.
+
+---
+
+## ☁️ Como entregar seu Desafio
+
+Salve seu prompt final em um arquivo `.txt` ou `.md` e publique em um dos hosts aceitos pela DIO.
+
+Os arquivos deste repositório já servem como entrega completa:
+
+| Arquivo | Conteúdo |
+|---|---|
+| `desafio.txt` | Passos 1, 2 e 3 em formato texto |
+| `README.md` | Documentação completa com todos os passos |
+| `desafio.sql` | Estrutura do banco de dados |
+| `massa_dados.sql` | 30 feedbacks variados |
+| `massa_negativos.sql` | 20 feedbacks negativos para teste |
