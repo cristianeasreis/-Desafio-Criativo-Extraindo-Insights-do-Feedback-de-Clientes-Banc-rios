@@ -1,0 +1,102 @@
+DESAFIO CRIATIVO: Extraindo Insights do Feedback de Clientes Bancarios
+
+Bem-vindo ao Desafio Criativo. Nesta atividade, voce seguira algumas etapas simples que, ao final,irao ajudar a extrair insights de feedbacks de clientes bancarios com apoio de IA, usando contexto, criterios de analise e cuidados com dados sensiveis.
+
+
+SOBRE O EXERCICIO
+
+Um bom prompt nasce de intencao clara, contexto e instrucoes especificas. Durante o desafio, voce ira organizar suas ideias e transforma-las em comandos claros.
+
+
+CONSTRUCAO PASSO A PASSO
+
+Cada etapa adicionara uma nova peca ao seu prompt final. Ao concluir todas, voce tera um prompt capaz de orientar uma IA a produzir exatamente o que voce imaginou.
+
+
+COMO RESOLVER
+
+Siga cada passo com atencao, registre suas respostas e, ao final, una todos os elementos para formar seu prompt final. Aproveite o processo criativo!
+
+---
+
+PASSO 2: Adicione contexto e restricoes
+
+Nesta etapa, voce vai incluir informacoes de apoio, limites e cuidados para orientar melhor a resposta da IA.
+
+
+O QUE FAZER
+
+Agora complemente sua intencao com contexto. Quais dados estarao disponiveis? Quais colunas ou campos existem? Que cuidados a IA deve ter ao lidar com feedbacks bancarios?
+
+Inclua tambem o que a IA deve evitar, como inventar dados, expor informacoes pessoais, ignorar comentarios negativos ou tirar conclusoes sem evidencia.
+
+
+MODELO PARA VOCE ADAPTAR
+
+Copie o bloco abaixo no seu editor de texto e preencha os campos entre colchetes:
+
+Contexto: Estou trabalhando com feedbacks de clientes bancarios relacionados a [produto, servico ou canal].
+
+Dados disponiveis: A base contem [descreva campos, colunas ou exemplos de informacoes disponiveis].
+
+Criterios de analise: A IA deve classificar os feedbacks por [temas, sentimento, urgencia, canal, produto ou outro criterio].
+
+Cuidados e restricoes:
+- Use apenas os dados fornecidos.
+- Nao invente numeros, causas ou conclusoes.
+- Nao exponha dados pessoais ou sensiveis.
+- Se houver informacao insuficiente, indique a limitacao.
+- Use linguagem [simples, executiva, tecnica ou outro estilo].
+
+
+EXEMPLO PREENCHIDO
+
+Veja como ficaria o Modelo acima ja preenchido em um caso real (use como referencia, nao copie literalmente):
+
+Contexto: Estou trabalhando com feedbacks de clientes bancarios relacionados ao aplicativo, Pix, cartao de credito e atendimento por chat.
+
+Dados disponiveis: A base contem data do comentario, canal de atendimento, texto do feedback, produto citado e nota de satisfacao de 1 a 5.
+
+Criterios de analise: A IA deve classificar os feedbacks por tema, sentimento, urgencia e possivel impacto na experiencia do cliente.
+
+Cuidados e restricoes:
+- Use apenas os dados fornecidos.
+- Nao invente numeros, causas ou conclusoes.
+- Nao exponha dados pessoais ou sensiveis.
+- Se houver informacao insuficiente, indique a limitacao.
+- Use linguagem simples, direta e voltada para tomada de decisao.
+
+---
+
+ESTRUTURA DO BANCO DE DADOS
+
+As tabelas abaixo foram criadas no arquivo desafio.sql para suportar a analise dos feedbacks:
+
+Tabelas criadas:
+
+1. canais_atendimento
+   - Canais disponiveis: Aplicativo, Chat, Agencia, Telefone
+
+2. produtos
+   - Produtos bancarios: Pix, Cartao de Credito, Conta Corrente, Investimentos, Emprestimo
+
+3. temas
+   - Temas para classificacao: Usabilidade, Seguranca, Atendimento, Tarifas, Desempenho, Funcionalidade
+
+4. feedbacks (tabela principal)
+   - id_feedback        : Identificador unico
+   - data_comentario    : Data do comentario
+   - id_canal           : Canal de atendimento
+   - id_produto         : Produto citado
+   - texto_feedback     : Conteudo do feedback
+   - nota_satisfacao    : Nota de 1 a 5
+   - id_cliente_anonimo : ID anonimizado (sem dados pessoais)
+
+5. classificacoes_feedback (resultado da analise de IA)
+   - sentimento         : Positivo, Negativo ou Neutro
+   - urgencia           : Alta, Media ou Baixa
+   - impacto_experiencia: Alto, Medio ou Baixo
+   - observacao         : Limitacoes ou notas da analise de IA
+   - data_classificacao : Data e hora da classificacao
+
+ATENCAO: A estrutura segue as restricoes do desafio - nenhum dado pessoal identificavel e armazenado.
