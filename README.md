@@ -104,7 +104,7 @@ As tabelas abaixo foram criadas no arquivo `desafio.sql` para suportar a anális
 | Arquivo | Tipo | Descrição |
 |---|---|---|
 | `README.md` | Markdown | Documentação completa do projeto |
-| `desafio.txt` | Texto | Conteúdo do desafio em formato texto simples |
+| `prompt_analise_feedback_bancario.txt` | Texto | Prompt final completo pronto para uso com IA |
 | `desafio.sql` | SQL | Criação das tabelas e carga dos dados de referência |
 | `massa_dados.sql` | SQL | 30 feedbacks variados (positivos, negativos e neutros) com suas classificações |
 | `massa_negativos.sql` | SQL | 20 feedbacks negativos para teste e validação da análise de IA |
@@ -277,7 +277,7 @@ Os arquivos deste repositório já servem como entrega completa:
 
 | Arquivo | Conteúdo |
 |---|---|
-| `desafio.txt` | Passos 1, 2 e 3 em formato texto |
+| `prompt_analise_feedback_bancario.txt` | Prompt final completo pronto para uso com IA |
 | `README.md` | Documentação completa com todos os passos |
 | `desafio.sql` | Estrutura do banco de dados |
 | `massa_dados.sql` | 30 feedbacks variados |
