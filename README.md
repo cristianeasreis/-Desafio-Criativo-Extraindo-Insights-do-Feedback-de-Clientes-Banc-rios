@@ -221,6 +221,54 @@ O exemplo abaixo usa os campos e tabelas criados nos arquivos `desafio.sql`, `ma
 
 ---
 
+## 🤖 Prompt Final Montado
+
+Abaixo está o prompt completo construído a partir de todos os passos anteriores, pronto para ser usado com uma IA:
+
+---
+
+> Atue como **analista de dados e experiência do cliente em um banco digital**.
+>
+> Sua tarefa é analisar uma base de feedbacks de clientes sobre os canais **Aplicativo, Chat, Agência e Telefone**, e os produtos **Pix, Cartão de Crédito, Conta Corrente, Investimentos e Empréstimo**. O objetivo é identificar temas recorrentes, medir o sentimento dos clientes, mapear os pontos críticos de urgência e propor ações de melhoria priorizadas.
+>
+> **Contexto:** A análise será consumida pela equipe de Experiência do Cliente e pelos times responsáveis pelos canais digitais. A decisão que precisa ser apoiada é a **priorização de melhorias para o próximo ciclo de desenvolvimento**, com foco em reduzir atritos, aumentar a satisfação e mitigar riscos operacionais e de segurança.
+>
+> **Dados disponíveis:** A base contém **50 registros** de feedbacks entre janeiro e abril de 2026, com os seguintes campos:
+> | Campo | Descrição |
+> |---|---|
+> | `data_comentario` | Data do registro do feedback |
+> | `canal` | Aplicativo, Chat, Agência ou Telefone |
+> | `produto` | Pix, Cartão de Crédito, Conta Corrente, Investimentos ou Empréstimo |
+> | `texto_feedback` | Comentário livre do cliente |
+> | `nota_satisfacao` | Nota de 1 a 5 |
+> | `sentimento` | Positivo, Negativo ou Neutro |
+> | `urgencia` | Alta, Média ou Baixa |
+> | `impacto_experiencia` | Alto, Médio ou Baixo |
+> | `observacao` | Notas adicionais da análise |
+> | `id_cliente_anonimo` | Identificador anonimizado (sem dados pessoais) |
+>
+> **Instruções de análise:**
+> 1. Classifique os feedbacks agrupando por tema (Usabilidade, Segurança, Atendimento, Tarifas, Desempenho, Funcionalidade), sentimento, urgência e produto citado.
+> 2. Identifique os principais padrões: quais canais e produtos concentram mais reclamações? Quais temas aparecem com maior frequência nos feedbacks negativos?
+> 3. Aponte evidências diretamente nos dados, citando trechos curtos dos comentários como suporte.
+> 4. Destaque os casos de urgência **Alta** e impacto **Alto** como prioridade crítica.
+> 5. Sugira ações práticas e objetivas para a equipe de Experiência do Cliente e para os times de produto e tecnologia.
+>
+> **Formato da resposta:**
+> - Resumo executivo em até 5 linhas
+> - Tabela com colunas: Tema | Sentimento | Urgência | Evidência (trecho do comentário) | Ação sugerida
+> - Lista das **3 prioridades mais críticas** com justificativa
+> - Alertas de segurança ou risco regulatório, se identificados
+>
+> **Restrições:**
+> - Use apenas os dados fornecidos na base.
+> - Não invente números, percentuais, causas ou conclusões sem respaldo nos dados.
+> - Não exponha dados pessoais ou sensíveis (IDs de clientes são anonimizados como `CLI-XXXX`).
+> - Se os dados forem insuficientes para uma conclusão, indique a limitação claramente.
+> - Use linguagem simples, direta e voltada para tomada de decisão.
+
+---
+
 ## ☁️ Como entregar seu Desafio
 
 Salve seu prompt final em um arquivo `.txt` ou `.md` e publique em um dos hosts aceitos pela DIO.

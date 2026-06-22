@@ -167,6 +167,48 @@ Restricoes:
 - Use linguagem simples, direta e voltada para tomada de decisao.
 
 
+PROMPT FINAL MONTADO
+
+Atue como analista de dados e experiencia do cliente em um banco digital.
+
+Sua tarefa e analisar uma base de feedbacks de clientes sobre os canais Aplicativo, Chat, Agencia e Telefone, e os produtos Pix, Cartao de Credito, Conta Corrente, Investimentos e Emprestimo. O objetivo e identificar temas recorrentes, medir o sentimento dos clientes, mapear os pontos criticos de urgencia e propor acoes de melhoria priorizadas.
+
+Contexto: A analise sera consumida pela equipe de Experiencia do Cliente e pelos times responsaveis pelos canais digitais. A decisao que precisa ser apoiada e a priorizacao de melhorias para o proximo ciclo de desenvolvimento, com foco em reduzir atritos, aumentar a satisfacao e mitigar riscos operacionais e de seguranca.
+
+Dados disponiveis: A base contem 50 registros de feedbacks entre janeiro e abril de 2026, com os seguintes campos:
+- data_comentario    : data do registro do feedback
+- canal             : Aplicativo, Chat, Agencia ou Telefone
+- produto           : Pix, Cartao de Credito, Conta Corrente, Investimentos ou Emprestimo
+- texto_feedback    : comentario livre do cliente
+- nota_satisfacao   : nota de 1 a 5
+- sentimento        : Positivo, Negativo ou Neutro
+- urgencia          : Alta, Media ou Baixa
+- impacto_experiencia: Alto, Medio ou Baixo
+- observacao        : notas adicionais da analise
+- id_cliente_anonimo: identificador anonimizado (sem dados pessoais)
+
+Instrucoes de analise:
+1. Classifique os feedbacks agrupando por tema (Usabilidade, Seguranca, Atendimento, Tarifas, Desempenho, Funcionalidade), sentimento, urgencia e produto citado.
+2. Identifique os principais padroes: quais canais e produtos concentram mais reclamacoes? Quais temas aparecem com maior frequencia nos feedbacks negativos?
+3. Aponte evidencias diretamente nos dados, citando trechos curtos dos comentarios como suporte.
+4. Destaque os casos de urgencia Alta e impacto Alto como prioridade critica.
+5. Sugira acoes praticas e objetivas para a equipe de Experiencia do Cliente e para os times de produto e tecnologia.
+
+Formato da resposta:
+- Resumo executivo em ate 5 linhas
+- Tabela com colunas: Tema | Sentimento | Urgencia | Evidencia (trecho do comentario) | Acao sugerida
+- Lista das 3 prioridades mais criticas com justificativa
+- Alertas de seguranca ou risco regulatorio, se identificados
+
+Restricoes:
+- Use apenas os dados fornecidos na base.
+- Nao invente numeros, percentuais, causas ou conclusoes sem respaldo nos dados.
+- Nao exponha dados pessoais ou sensiveis (IDs de clientes sao anonimizados como CLI-XXXX).
+- Se os dados forem insuficientes para uma conclusao, indique a limitacao claramente.
+- Use linguagem simples, direta e voltada para tomada de decisao.
+
+---
+
 COMO ENTREGAR SEU DESAFIO
 
 Salve seu prompt final em um arquivo .txt ou .md e publique em um dos hosts aceitos pela DIO.
