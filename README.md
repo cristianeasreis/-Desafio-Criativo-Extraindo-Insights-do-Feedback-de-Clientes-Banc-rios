@@ -1,64 +1,12 @@
-# 🎯 Desafio Criativo: Extraindo Insights do Feedback de Clientes Bancários
+# 🎯 Análise de Feedback de Clientes Bancários com IA
 
-Bem-vindo ao Desafio Criativo. Nesta atividade, você seguirá algumas etapas simples que, ao final, irão ajudar a **extrair insights de feedbacks de clientes bancários com apoio de IA, usando contexto, critérios de análise e cuidados com dados sensíveis**.
-
-## 💡 Sobre o Exercício
-
-Um bom prompt nasce de **intenção clara, contexto e instruções específicas**. Durante o desafio, você irá organizar suas ideias e transformá-las em comandos claros.
-
-## 🧩 Construção Passo a Passo
-
-Cada etapa adicionará uma **nova peça** ao seu prompt final. Ao concluir todas, você terá um prompt capaz de orientar uma IA a produzir exatamente o que você imaginou.
-
-## 🚀 Como Resolver
-
-Siga cada passo com atenção, registre suas respostas e, ao final, **una todos os elementos** para formar seu prompt final. Aproveite o processo criativo!
+**Documentação Técnica do Projeto**
 
 ---
 
-# Passo 2: Adicione contexto e restrições
+## 📌 Visão Geral
 
-Nesta etapa, você vai **incluir informações de apoio, limites e cuidados para orientar melhor a resposta da IA**.
-
-## ✍️ O que fazer
-
-Agora complemente sua intenção com contexto. Quais dados estarão disponíveis? Quais colunas ou campos existem? Que cuidados a IA deve ter ao lidar com feedbacks bancários?
-
-Inclua também o que a IA deve evitar, como inventar dados, expor informações pessoais, ignorar comentários negativos ou tirar conclusões sem evidência.
-
-## 📋 Modelo para você adaptar
-
-Copie o bloco abaixo no seu editor de texto e preencha os campos entre colchetes:
-
-> **Contexto:** Estou trabalhando com feedbacks de clientes bancários relacionados a [produto, serviço ou canal].
->
-> **Dados disponíveis:** A base contém [descreva campos, colunas ou exemplos de informações disponíveis].
->
-> **Critérios de análise:** A IA deve classificar os feedbacks por [temas, sentimento, urgência, canal, produto ou outro critério].
->
-> **Cuidados e restrições:**
-> - Use apenas os dados fornecidos.
-> - Não invente números, causas ou conclusões.
-> - Não exponha dados pessoais ou sensíveis.
-> - Se houver informação insuficiente, indique a limitação.
-> - Use linguagem [simples, executiva, técnica ou outro estilo].
-
-## ✨ Exemplo preenchido
-
-Veja como ficaria o Modelo acima já preenchido em um caso real (use como referência, não copie literalmente):
-
-> **Contexto:** Estou trabalhando com feedbacks de clientes bancários relacionados ao aplicativo, Pix, cartão de crédito e atendimento por chat.
->
-> **Dados disponíveis:** A base contém data do comentário, canal de atendimento, texto do feedback, produto citado e nota de satisfação de 1 a 5.
->
-> **Critérios de análise:** A IA deve classificar os feedbacks por tema, sentimento, urgência e possível impacto na experiência do cliente.
->
-> **Cuidados e restrições:**
-> - Use apenas os dados fornecidos.
-> - Não invente números, causas ou conclusões.
-> - Não exponha dados pessoais ou sensíveis.
-> - Se houver informação insuficiente, indique a limitação.
-> - Use linguagem simples, direta e voltada para tomada de decisão.
+Este projeto implementa uma solução completa para **extração de insights de feedbacks de clientes bancários com apoio de Inteligência Artificial**. O objetivo é estruturar dados de comentários, classificá-los por tema, sentimento e urgência, e gerar um prompt especializado para orientar modelos de IA na análise desses dados.
 
 ---
 
@@ -155,130 +103,101 @@ massa_negativos.sql
 
 ---
 
-# Passo 3: Una as peças e refine
+## 🤖 Prompt de IA
 
-Nesta etapa, você vai **juntar intenção, contexto, critérios e restrições em um único prompt final**.
+O prompt final está disponível no arquivo [`prompt_analise_feedback_bancario.txt`](prompt_analise_feedback_bancario.txt) e foi construído com os seguintes componentes:
 
-## ✍️ O que fazer
-
-Reúna o que você escreveu nos passos anteriores e transforme tudo em um comando claro para a IA. O prompt final deve dizer o papel da IA, o objetivo, os dados que serão analisados, o formato da resposta e os cuidados esperados.
-
-Depois de montar o prompt, revise: a tarefa está clara? O formato da resposta foi definido? A IA sabe o que evitar?
-
-## 📋 Modelo para você adaptar
-
-Copie o bloco abaixo no seu editor de texto e preencha os campos entre colchetes:
-
-> Atue como [papel da IA, como analista de dados, analista de experiência do cliente ou consultor de negócios].
->
-> Sua tarefa é analisar [tipo de feedback ou base de comentários] sobre [produto, serviço ou canal] para identificar [objetivo principal].
->
-> **Contexto:** [explique o cenário, o público que usará a análise e a decisão que precisa ser apoiada].
->
-> **Dados disponíveis:** [descreva os campos, colunas ou exemplos de informações que serão fornecidas].
->
-> **Instruções de análise:**
-> 1. Classifique os feedbacks por [critérios de classificação].
-> 2. Identifique os principais padrões, problemas, elogios e oportunidades.
-> 3. Aponte evidências nos dados fornecidos.
-> 4. Sugira ações práticas para [público ou área responsável].
->
-> **Formato da resposta:** [descreva o formato esperado, como resumo executivo, tabela, tópicos e recomendações].
->
-> **Restrições:**
-> - Use apenas os dados fornecidos.
-> - Não invente números, causas ou conclusões.
-> - Não exponha dados pessoais ou sensíveis.
-> - Informe limitações quando os dados não forem suficientes.
-> - Use linguagem [estilo desejado].
-
-## ✨ Exemplo preenchido — baseado na estrutura deste projeto
-
-O exemplo abaixo usa os campos e tabelas criados nos arquivos `desafio.sql`, `massa_dados.sql` e `massa_negativos.sql`:
-
-> Atue como analista de dados e experiência do cliente em um banco.
->
-> Sua tarefa é analisar feedbacks de clientes sobre aplicativo bancário, Pix, cartão de crédito e atendimento por chat para identificar temas recorrentes, sentimento dos clientes e oportunidades de melhoria.
->
-> **Contexto:** A análise será usada por uma equipe de experiência do cliente para priorizar melhorias nos canais digitais e reduzir atritos no atendimento. O foco é transformar comentários soltos em insights claros e acionáveis.
->
-> **Dados disponíveis:** Serão fornecidos comentários com `data_comentario`, `canal de atendimento`, `texto_feedback`, `produto citado` e `nota_satisfacao` de 1 a 5. Os feedbacks já possuem classificações de `sentimento`, `urgencia` e `impacto_experiencia` geradas por análise anterior. A base contém 50 registros entre janeiro e abril de 2026, dos quais 20 são feedbacks negativos para validação.
->
-> **Instruções de análise:**
-> 1. Classifique os feedbacks por tema (`temas`), sentimento, urgência e produto citado.
-> 2. Identifique os principais padrões, problemas, elogios e oportunidades.
-> 3. Aponte evidências nos dados fornecidos, usando exemplos curtos de comentários.
-> 4. Sugira ações práticas para a equipe de experiência do cliente e para o time responsável pelos canais digitais.
->
-> **Formato da resposta:** Entregue um resumo executivo com até 5 linhas, uma tabela com tema, sentimento, evidência e ação sugerida, além de uma lista final com as 3 prioridades mais importantes.
->
-> **Restrições:**
-> - Use apenas os dados fornecidos.
-> - Não invente números, causas ou conclusões.
-> - Não exponha dados pessoais ou sensíveis (os IDs de clientes são anonimizados: `CLI-XXXX`).
-> - Informe limitações quando os dados não forem suficientes.
-> - Use linguagem simples, direta e voltada para tomada de decisão.
-
----
-
-## 🤖 Prompt Final Montado
-
-Abaixo está o prompt completo construído a partir de todos os passos anteriores, pronto para ser usado com uma IA:
-
----
-
-> Atue como **analista de dados e experiência do cliente em um banco digital**.
->
-> Sua tarefa é analisar uma base de feedbacks de clientes sobre os canais **Aplicativo, Chat, Agência e Telefone**, e os produtos **Pix, Cartão de Crédito, Conta Corrente, Investimentos e Empréstimo**. O objetivo é identificar temas recorrentes, medir o sentimento dos clientes, mapear os pontos críticos de urgência e propor ações de melhoria priorizadas.
->
-> **Contexto:** A análise será consumida pela equipe de Experiência do Cliente e pelos times responsáveis pelos canais digitais. A decisão que precisa ser apoiada é a **priorização de melhorias para o próximo ciclo de desenvolvimento**, com foco em reduzir atritos, aumentar a satisfação e mitigar riscos operacionais e de segurança.
->
-> **Dados disponíveis:** A base contém **50 registros** de feedbacks entre janeiro e abril de 2026, com os seguintes campos:
-> | Campo | Descrição |
-> |---|---|
-> | `data_comentario` | Data do registro do feedback |
-> | `canal` | Aplicativo, Chat, Agência ou Telefone |
-> | `produto` | Pix, Cartão de Crédito, Conta Corrente, Investimentos ou Empréstimo |
-> | `texto_feedback` | Comentário livre do cliente |
-> | `nota_satisfacao` | Nota de 1 a 5 |
-> | `sentimento` | Positivo, Negativo ou Neutro |
-> | `urgencia` | Alta, Média ou Baixa |
-> | `impacto_experiencia` | Alto, Médio ou Baixo |
-> | `observacao` | Notas adicionais da análise |
-> | `id_cliente_anonimo` | Identificador anonimizado (sem dados pessoais) |
->
-> **Instruções de análise:**
-> 1. Classifique os feedbacks agrupando por tema (Usabilidade, Segurança, Atendimento, Tarifas, Desempenho, Funcionalidade), sentimento, urgência e produto citado.
-> 2. Identifique os principais padrões: quais canais e produtos concentram mais reclamações? Quais temas aparecem com maior frequência nos feedbacks negativos?
-> 3. Aponte evidências diretamente nos dados, citando trechos curtos dos comentários como suporte.
-> 4. Destaque os casos de urgência **Alta** e impacto **Alto** como prioridade crítica.
-> 5. Sugira ações práticas e objetivas para a equipe de Experiência do Cliente e para os times de produto e tecnologia.
->
-> **Formato da resposta:**
-> - Resumo executivo em até 5 linhas
-> - Tabela com colunas: Tema | Sentimento | Urgência | Evidência (trecho do comentário) | Ação sugerida
-> - Lista das **3 prioridades mais críticas** com justificativa
-> - Alertas de segurança ou risco regulatório, se identificados
->
-> **Restrições:**
-> - Use apenas os dados fornecidos na base.
-> - Não invente números, percentuais, causas ou conclusões sem respaldo nos dados.
-> - Não exponha dados pessoais ou sensíveis (IDs de clientes são anonimizados como `CLI-XXXX`).
-> - Se os dados forem insuficientes para uma conclusão, indique a limitação claramente.
-> - Use linguagem simples, direta e voltada para tomada de decisão.
-
----
-
-## ☁️ Como entregar seu Desafio
-
-Salve seu prompt final em um arquivo `.txt` ou `.md` e publique em um dos hosts aceitos pela DIO.
-
-Os arquivos deste repositório já servem como entrega completa:
-
-| Arquivo | Conteúdo |
+| Componente | Descrição |
 |---|---|
-| `prompt_analise_feedback_bancario.txt` | Prompt final completo pronto para uso com IA |
-| `README.md` | Documentação completa com todos os passos |
-| `desafio.sql` | Estrutura do banco de dados |
-| `massa_dados.sql` | 30 feedbacks variados |
-| `massa_negativos.sql` | 20 feedbacks negativos para teste |
+| **Papel** | Analista de dados e experiência do cliente em banco digital |
+| **Objetivo** | Identificar temas recorrentes, sentimento, urgência e propor ações priorizadas |
+| **Dados de entrada** | 50 feedbacks com 10 campos estruturados (canal, produto, nota, sentimento, urgência, impacto) |
+| **Saída esperada** | Resumo executivo + tabela analítica + top 3 prioridades + alertas de segurança |
+| **Restrições** | Sem invenção de dados, sem exposição de dados pessoais, IDs anonimizados |
+
+### Campos utilizados no prompt
+
+| Campo | Tipo | Descrição |
+|---|---|---|
+| `data_comentario` | DATE | Data do registro |
+| `canal` | VARCHAR | Aplicativo, Chat, Agência ou Telefone |
+| `produto` | VARCHAR | Pix, Cartão de Crédito, Conta Corrente, Investimentos ou Empréstimo |
+| `texto_feedback` | TEXT | Comentário livre do cliente |
+| `nota_satisfacao` | TINYINT | Nota de 1 a 5 |
+| `sentimento` | VARCHAR | Positivo, Negativo ou Neutro |
+| `urgencia` | VARCHAR | Alta, Média ou Baixa |
+| `impacto_experiencia` | VARCHAR | Alto, Médio ou Baixo |
+| `observacao` | TEXT | Notas da análise |
+| `id_cliente_anonimo` | VARCHAR | ID anonimizado — sem dados pessoais identificáveis |
+
+---
+
+## 📁 Arquivos do Projeto
+
+| Arquivo | Tipo | Descrição |
+|---|---|---|
+| `README.md` | Markdown | Documentação técnica do projeto |
+| `prompt_analise_feedback_bancario.txt` | Texto | Prompt final pronto para uso com qualquer modelo de IA |
+| `desafio.sql` | SQL | DDL completo: criação das 5 tabelas e carga dos dados de referência |
+| `massa_dados.sql` | SQL | 30 feedbacks variados (positivos, negativos e neutros) com classificações |
+| `massa_negativos.sql` | SQL | 20 feedbacks negativos para testes e validação da análise de IA |
+
+---
+
+## ▶️ Como Executar
+
+### Pré-requisito
+
+Qualquer banco de dados relacional compatível com SQL padrão (MySQL, PostgreSQL, SQL Server ou SQLite).
+
+### Ordem de execução
+
+```sql
+-- 1. Criar a estrutura do banco e popular dados de referência
+desafio.sql
+
+-- 2. Inserir massa geral de dados (jan–mar 2026)
+massa_dados.sql
+
+-- 3. Inserir massa de testes negativos (abr 2026)
+massa_negativos.sql
+```
+
+### Verificação após execução
+
+```sql
+-- Total de feedbacks inseridos
+SELECT COUNT(*) FROM feedbacks;
+-- Esperado: 50
+
+-- Distribuição por sentimento
+SELECT sentimento, COUNT(*) AS total
+FROM classificacoes_feedback
+GROUP BY sentimento;
+
+-- Feedbacks críticos (urgência Alta + impacto Alto)
+SELECT f.texto_feedback, c.sentimento, c.urgencia, c.observacao
+FROM feedbacks f
+JOIN classificacoes_feedback c ON f.id_feedback = c.id_feedback
+WHERE c.urgencia = 'Alta' AND c.impacto_experiencia = 'Alto';
+```
+
+---
+
+## 🔒 Política de Dados
+
+- Nenhum dado pessoal identificável é armazenado
+- Clientes são referenciados apenas por ID anonimizado (`CLI-XXXX`)
+- Feedbacks não contêm nome, CPF, e-mail ou qualquer informação sensível
+- As restrições do prompt orientam a IA a manter a mesma política na análise
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Uso |
+|---|---|
+| SQL (padrão ANSI) | Modelagem e carga dos dados |
+| Markdown | Documentação |
+| Git / GitHub | Versionamento e publicação |
+| IA Generativa | Análise dos feedbacks via prompt estruturado |
